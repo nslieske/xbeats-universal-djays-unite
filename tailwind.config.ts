@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,17 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// XBeats Custom Colors
+				xbeats: {
+					dark: '#121212',
+					darker: '#070707',
+					medium: '#181818',
+					light: '#282828',
+					green: '#1ED760',
+					purple: '#8B5CF6',
+					blue: '#3B82F6',
+					pink: '#EC4899',
 				}
 			},
 			borderRadius: {
@@ -84,12 +96,30 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
+				},
+				'pulse-slow': {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0.8' },
+				},
+				'wave': {
+					'0%': { transform: 'scaleY(1)' },
+					'50%': { transform: 'scaleY(0.7)' },
+					'100%': { transform: 'scaleY(1)' },
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-slow': 'pulse-slow 3s ease-in-out infinite',
+				'wave-1': 'wave 1.2s ease-in-out infinite',
+				'wave-2': 'wave 1.2s ease-in-out infinite 0.2s',
+				'wave-3': 'wave 1.2s ease-in-out infinite 0.4s',
+				'wave-4': 'wave 1.2s ease-in-out infinite 0.6s',
+			},
+			backgroundImage: {
+				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+				'gradient-hero': 'linear-gradient(to bottom, #8B5CF6, #3B82F6, #EC4899)',
+			},
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
